@@ -34,6 +34,7 @@ export default class Rational {
     var num = numerator.toString();
     var den = denominator.toString();
 	var result = num + '/' + den; 
+	return result; 
     }
 
   plus(other) {
@@ -82,7 +83,7 @@ export default class Rational {
 
   minus(other) {
       if (this.denominator === other.denominator) {
-	  const numerator = (this.numerator * other.numerator);
+	  const numerator = (this.numerator - other.numerator);
 	  return new Rational(numerator,this.denominator); 
       }
       else if (this.denominator > other.denominator) {
